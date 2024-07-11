@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1> Outras formatações </h1>
+    <h2> Código fonte/Pré formatação </h2>
+    <p> Aqui está um exemplo de deixar a fonte monoespaçada, usando a tag code </p>
+    <p> <code>printf("")</code> é um comando em C</p>
+    <p> a tag code não deixa em linhas separadas, para isso usamos a tag pre </p>
+    
+    <pre>
+        <code>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    // Criando estrutura para lista
+    typedef struct Movie {
+        char name[100];
+        struct Movie* next;
+    } Movie;
+
+    // Método de lista para a inserção do nome do filme
+    Movie* createMovie(char name[]) {
+        Movie* newMovie = (Movie*)malloc(sizeof(Movie));
+        strcpy(newMovie->name, name);
+        newMovie->next = NULL;
+        return newMovie;
+    }
+        </code>
+    </pre>
+    <h2> Citações </h2>
+    <p> A seguir, envelopamento com q </p>
+    <p> Segundo fulano: <q>Rir é o melhor remédio</q></p>
+    <p> Para citações de bloco usamos blockquote </p>
+    <p>
+        Segundo ciclano no livro tal:
+        <blockquote cite="https://www.cursoemvideo.com/curso/html5-css3-modulo1/aulas/modulo-1-2/modulos/capitulo-8-aula-4-citacoes-e-codigos/">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ex officiis suscipit eum? In numquam, officia vitae odit aspernatur atque non eum corrupti, sed aperiam quidem! Ducimus inventore mollitia assumenda.
+        </blockquote>
+    </p>
+    <h2> Abreviações </h2>
+    <p> Abreviando com abbr </p>
+    <p> Estudando <abbr title="Hypertext Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+    <h2> Texto Invertido </h2>
+    <p> Usando bdo </p>
+    <p> Esquerda para direita: <bdo dir="ltr"> Olá amigos</bdo></p>
+    <p> Direita para esquerda: <bdo dir="rtl"> Olá amigos</bdo></p>
+    
+</body>
+</html>
